@@ -1,0 +1,11 @@
+framework module Dogecoin {
+  umbrella header "Dogecoin.h"
+
+  export *
+  module * { export * }
+}
+
+module Dogecoin.Swift {
+    header "Dogecoin-Swift.h"
+    requires objc
+}

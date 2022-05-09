@@ -1,0 +1,26 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Dogecoin
+@_exported import Dogecoin
+import Foundation
+import Swift
+import _Concurrency
+public enum DogecoinError : Swift.Error {
+  case failPrivkey(message: Swift.String)
+  case failPubkey(message: Swift.String)
+  case failRedeemScript(message: Swift.String)
+  case failRawTx(message: Swift.String)
+  case failSighash(message: Swift.String)
+  case failSignature(message: Swift.String)
+  case failBuildTx(message: Swift.String)
+}
+public func judgeHex(s: Swift.String) -> Swift.Bool
+public func generateMyPrivkey(phrase: Swift.String, pd_passphrase: Swift.String) -> Swift.Result<Swift.String, Dogecoin.DogecoinError>
+public func generateMyPubkey(privkey: Swift.String) -> Swift.Result<Swift.String, Dogecoin.DogecoinError>
+public func generateAddress(pubkey: Swift.String, network: Swift.String) -> Swift.String
+public func generateRedeemScript(pubkeys: [Swift.String], threshold: Swift.UInt32) -> Swift.Result<Swift.String, Dogecoin.DogecoinError>
+public func generateMultisigAddress(redeem_script: Swift.String, network: Swift.String) -> Swift.String
+public func generateRawTx(txids: [Swift.String], indexs: [Swift.UInt32], addresses: [Swift.String], amounts: [Swift.UInt64]) -> Swift.Result<Swift.String, Dogecoin.DogecoinError>
+public func generateSighash(base_tx: Swift.String, txid: Swift.String, index: Swift.UInt32, sig_type: Swift.UInt32, script: Swift.String) -> Swift.Result<Swift.String, Dogecoin.DogecoinError>
+public func generateSignature(message: Swift.String, privkey: Swift.String) -> Swift.Result<Swift.String, Dogecoin.DogecoinError>
+public func buildTx(base_tx: Swift.String, signature: Swift.String, txid: Swift.String, index: Swift.UInt32, sig_type: Swift.UInt32, script: Swift.String) -> Swift.Result<Swift.String, Dogecoin.DogecoinError>
