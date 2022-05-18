@@ -2,7 +2,7 @@
 //  Dogecoin.h
 //  Dogecoin
 //
-//  Created by daiwei on 2022/5/9.
+//  Created by daiwei on 2022/5/18.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,3 +16,4 @@ FOUNDATION_EXPORT const unsigned char DogecoinVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <Dogecoin/PublicHeader.h>
 
 #import <Dogecoin/DogecoinHeader.h>
+
